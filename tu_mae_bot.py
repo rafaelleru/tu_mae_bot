@@ -21,9 +21,9 @@ def recibe(messages):
             if m.content_type == 'text':
                 if 'quien' in m.text or 'Quien' in m.text:
                     bot.send_message(m.chat.id, '/tumae')
-                if 'cafeto' in m.text or 'Quien' in m.text:
+                if 'cafeto' in m.text:
                     bot.send_message(m.chat.id, '/tumae')
-                if 'cafeteria' in m.text or 'Quien' in m.text:
+                if 'cafeteria' in m.text:
                     bot.send_message(m.chat.id, '/tumae')
                 elif '/spam' in m.text:
                     for i in range (0, 10):
