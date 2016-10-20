@@ -1,5 +1,6 @@
 import telebot
 import os
+import logging
 
 bot = telebot.TeleBot(os.environ["tu_mae_token"])
 
@@ -20,6 +21,10 @@ def recibe(messages):
             if m.content_type == 'text':
                 if 'quien' in m.text or 'Quien' in m.text:
                     bot.send_message(m.chat.id, '/tumae')
+                if 'cafeto' in m.text or 'Quien' in m.text:
+                    bot.send_message(m.chat.id, '/tumae')
+                if 'cafeteria' in m.text or 'Quien' in m.text:
+                    bot.send_message(m.chat.id, '/tumae')
                 elif '/spam' in m.text:
                     for i in range (0, 10):
                         bot.send_message(m.chat.id, '/spam')
@@ -28,4 +33,4 @@ def recibe(messages):
             bot.send_message(m.chat.id, "tus muertos siroloooooooo")
 
 bot.set_update_listener(recibe)
-bot.polling()
+bot.polling(none_stop=False)
