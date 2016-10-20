@@ -1,5 +1,6 @@
 import telebot
 import os
+import random
 import logging
 
 bot = telebot.TeleBot(os.environ["tu_mae_token"])
@@ -17,15 +18,27 @@ def recibe(messages):
                 bot.send_message(m.chat.id, 'Subete los pantalones mierda')
             elif m.from_user.username == 'McMayXIII':
                 bot.send_message(m.chat.id, 'Porreroooo')
-                
-            if m.content_type == 'text':
+
+            ran = random.randint(1,20)
+
+            if m.content_type == 'text' and ran < 4:
                 if 'quien' in m.text or 'Quien' in m.text:
-                    bot.send_message(m.chat.id, '/tumae')
+                    if(ran==1):
+                        bot.send_message(m.chat.id, '/lamaedelsergio')
+                    else:
+                        bot.send_message(m.chat.id, '/tumae')
                 if 'cafeto' in m.text:
-                    bot.send_message(m.chat.id, '/tumae')
+                    if(ran==1):
+                        bot.send_message(m.chat.id, '/lamaedelsergio')
+                    else:
+                        bot.send_message(m.chat.id, '/tumae')
                 if 'cafeteria' in m.text:
-                    bot.send_message(m.chat.id, '/tumae')
-                elif '/spam' in m.text:
+                    if(ran==1):
+                        bot.send_message(m.chat.id, '/lamaedelsergio')
+                    else:
+                        bot.send_message(m.chat.id, '/tumae')
+            if m.content_type == 'text':
+                if '/spam' in m.text:
                     for i in range (0, 10):
                         bot.send_message(m.chat.id, '/spam')
         #fin del if
