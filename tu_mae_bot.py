@@ -12,12 +12,15 @@ def send_welcome(message):
 def recibe(messages):
     for m in messages:
         if m.chat.type == 'group' or m.chat.type == 'supergroup':
-            if m.from_user.username == 'SRMarin':
-                bot.send_message(m.chat.id, 'Comprate un cuello sirolo')
-            elif m.from_user.username == 'Raulytaso':
-                bot.send_message(m.chat.id, 'Subete los pantalones mierda')
-            elif m.from_user.username == 'McMayXIII':
-                bot.send_message(m.chat.id, 'Porreroooo')
+            ran = random.randint(1, 9)
+
+            if ran < 3:
+                if m.from_user.username == 'SRMarin':
+                    bot.send_message(m.chat.id, 'Comprate un cuello sirolo')
+                elif m.from_user.username == 'Raulytaso':
+                    bot.send_message(m.chat.id, 'Subete los pantalones mierda')
+                elif m.from_user.username == 'McMayXIII':
+                    bot.send_message(m.chat.id, 'Porreroooo')
 
             ran = random.randint(1,20)
 
@@ -37,10 +40,10 @@ def recibe(messages):
                         bot.send_message(m.chat.id, '/lamaedelsergio')
                     else:
                         bot.send_message(m.chat.id, '/tumae')
-            if m.content_type == 'text':
-                if '/spam' in m.text:
-                    for i in range (0, 10):
-                        bot.send_message(m.chat.id, '/spam')
+#            if m.content_type == 'text':
+#               if '/spam' in m.text:
+#                   for i in range (0, 10):
+#                        bot.send_message(m.chat.id, '/spam')
 
             ran = random.randint(1,200)
             if(ran==2):
