@@ -45,23 +45,17 @@ def recibe(messages):
             ran = random.randint(1,200)
             if ran==2 :
                 import urllib
-                import random
-                ran1 = random.randint(100, 500)
-                ran2 = random.randint(1, 3)
+                ran2 = random.randint(1, 2)
                 f = open('1.jpg', 'wb')
                 if ran2==1 :
-                    string='https://www.placecage.com/'
+                    string='http://cageme.herokuapp.com/500/500'
 
                 if ran2==2 :
-                    string='https://www.placecage.com/g/'
+                    string='http://cageme.herokuapp.com/g/500/500'
 
-                if ran2==3 :
-                    string='https://www.placecage.com/c/'
-        
+                # if ran2==3 :
+                #    string='https://www.placecage.com/c/'
 
-                string+=str(ran1)
-                string+='/'
-                string+=str(ran1)
                 f.write(urllib.urlopen(string).read())
 
                 f.close()
