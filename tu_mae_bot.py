@@ -24,7 +24,7 @@ def recibe(messages):
 
             ran = random.randint(1,20)
 
-            if m.content_type == 'text' and ran < 4:
+            if m.content_type == 'text':
                 if 'quien' in m.text or 'Quien' in m.text:
                     if(ran==1):
                         bot.send_message(m.chat.id, '/lamaedelsergio')
