@@ -12,9 +12,9 @@ def send_welcome(message):
 def recibe(messages):
     for m in messages:
         if m.chat.type == 'group' or m.chat.type == 'supergroup':
-            ran = random.randint(1, 9)
+            ran_ = random.randint(1, 9)
 
-            if ran < 3:
+            if ran_ < 3:
                 if m.from_user.username == 'SRMarin':
                     bot.send_message(m.chat.id, 'Comprate un cuello sirolo')
                 elif m.from_user.username == 'Raulytaso':
