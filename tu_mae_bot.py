@@ -46,17 +46,21 @@ def recibe(messages):
 #                        bot.send_message(m.chat.id, '/spam')
 
             ran = random.randint(1,200)
-            if(ran==2):
+            if ran==2 :
                 import urllib
-                ran1 = random.randint(100, 500)
-                ran2 = random.randint(1, 3)
+                ran2 = random.randint(1, 2)
                 f = open('1.jpg', 'wb')
-                if(ran2==1):
-                    f.write(urllib.urlopen('https://www.placecage.com/'+ran1+'/'+ran1).read())
-                if(ran2==2):
-                    f.write(urllib.urlopen('https://www.placecage.com/g/'+ran1+'/'+ran1).read())
-                if(ran2==3):
-                    f.write(urllib.urlopen('https://www.placecage.com/c/'+ran1+'/'+ran1).read())
+                if ran2==1 :
+                    string='http://cageme.herokuapp.com/500/500'
+
+                if ran2==2 :
+                    string='http://cageme.herokuapp.com/g/500/500'
+
+                # if ran2==3 :
+                #    string='https://www.placecage.com/c/'
+
+                f.write(urllib.urlopen(string).read())
+
                 f.close()
 
                 photo = open('1.jpg', 'rb')
