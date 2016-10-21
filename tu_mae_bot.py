@@ -22,7 +22,7 @@ def recibe(messages):
                 elif m.from_user.username == 'McMayXIII':
                     bot.send_message(m.chat.id, 'Porreroooo')
 
-            ran = random.randint(1,20)
+            rand = random.randint(1,20)
             
             message=' '
             
