@@ -27,7 +27,7 @@ def recibe(messages):
             message=' '
             
             if m.content_type == 'text':
-                Msgs=['/tumae', '/lamaedelsergio', '/paQueQuieresSaberEsoJaJaSaludos' '/elCuellodelSegio'] 
+                Msgs=['/tumae', '/lamaedelsergio', '/paQueQuieresSaberEsoJaJaSaludos', '/elCuellodelSegio'] 
                 """ eliminamos if innecesarios"""
                 
                 if 'quien' in m.text or 'Quien' in m.text:
