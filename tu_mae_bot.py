@@ -23,30 +23,30 @@ def recibe(messages):
                     bot.send_message(m.chat.id, 'Porreroooo')
 
             ran = random.randint(1,20)
-
+            
+            message=' '
+            
             if m.content_type == 'text':
+                """ eliminamos if innecesarios"""
+                if(rand==1):
+                    message='/lamaedelsergio'
+                else:
+                    message='/tumae'
+                
                 if 'quien' in m.text or 'Quien' in m.text:
-                    if(ran==1):
-                        bot.send_message(m.chat.id, '/lamaedelsergio')
-                    else:
-                        bot.send_message(m.chat.id, '/tumae')
+                    bot.send_message(m.chat.id, message)
                 if 'cafeto' in m.text:
-                    if(ran==1):
-                        bot.send_message(m.chat.id, '/lamaedelsergio')
-                    else:
-                        bot.send_message(m.chat.id, '/tumae')
+                    bot.send_message(m.chat.id, message)
                 if 'cafeteria' in m.text:
-                    if(ran==1):
-                        bot.send_message(m.chat.id, '/lamaedelsergio')
-                    else:
-                        bot.send_message(m.chat.id, '/tumae')
+                    bot.send_message(m.chat.id, message)
 #            if m.content_type == 'text':
 #               if '/spam' in m.text:
 #                   for i in range (0, 10):
 #                        bot.send_message(m.chat.id, '/spam')
 
-            ran = random.randint(1,200)
-            if ran==2 :
+            ran = random.randint(1,100)
+            """ le damos un 5% de probabilidad de que pase"""
+            if ran <= 5 :
                 import urllib
                 ran2 = random.randint(1, 2)
                 f = open('1.jpg', 'wb')
