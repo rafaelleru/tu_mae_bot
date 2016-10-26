@@ -41,7 +41,7 @@ def recibe(messages):
 #                   for i in range (0, 10):
 #                        bot.send_message(m.chat.id, '/spam')
 
-            ran = random.randint(1,100)
+            ran = random.randint(1,1000)
             """ le damos un 5% de probabilidad de que pase"""
             if ran <= 5 :
                 import urllib
