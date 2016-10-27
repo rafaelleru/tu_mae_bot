@@ -23,18 +23,20 @@ def recibe(messages):
                     bot.send_message(m.chat.id, 'Porreroooo')
 
             rand = random.randint(1,20)
-            
+
             message=' '
-            
+
             if m.content_type == 'text':
-                Msgs=['/tumae', '/lamaedelsergio', '/paQueQuieresSaberEsoJaJaSaludos', '/elCuellodelSegio'] 
-                """ eliminamos if innecesarios"""
-                
+                Msgs=['/tumae', '/lamaedelsergio', '/paQueQuieresSaberEsoJaJaSaludos', '/elCuellodelSegio']
+                #eliminamos if innecesarios
+
                 if 'quien' in m.text or 'Quien' in m.text:
                     bot.send_message(m.chat.id, Msgs[random.randint(0,3)])
                 elif 'cafeto' in m.text:
                     bot.send_message(m.chat.id, Msgs[random.randint(0,3)])
                 elif 'cafeteria' in m.text:
+                    bot.send_message(m.chat.id, Msgs[random.randint(0,3)])
+                elif 'alguien en' in m.text:
                     bot.send_message(m.chat.id, Msgs[random.randint(0,3)])
 #            if m.content_type == 'text':
 #               if '/spam' in m.text:
